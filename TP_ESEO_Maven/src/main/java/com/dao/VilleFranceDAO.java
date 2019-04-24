@@ -46,7 +46,7 @@ public boolean creationVille(Ville ville) {
 			
 			
 		}catch (Exception e){
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		
 		return init;
@@ -92,7 +92,7 @@ public boolean creationVille(Ville ville) {
 			
 			
 		}catch (Exception e) {
-		      e.printStackTrace();
+			throw new RuntimeException(e);
 	
 	
 	  }
@@ -110,13 +110,12 @@ public boolean creationVille(Ville ville) {
 
 			prepare.close();
 		}catch (Exception e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 
 	
 	public boolean update(Ville ville, String codeCommune) {
-		// TODO Auto-generated method stub
 		boolean init = false;
 		try {
 			Connection connect = ConnectionBdd.getInstance();
@@ -136,14 +135,13 @@ public boolean creationVille(Ville ville) {
 			prepare.setString(5, ville.getLigne5());
 			prepare.setString(6, ville.getLatitude());
 			prepare.setString(7, ville.getLongitude());
-			System.out.println("QUERY : "+query);
 			prepare.executeUpdate();
 
 			prepare.close();
 			init = true;
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 		return init;
 	}
@@ -190,7 +188,7 @@ public boolean creationVille(Ville ville) {
 			
 			
 		}catch (Exception e) {
-		      e.printStackTrace();
+			throw new RuntimeException(e);
 	
 	
 	  }

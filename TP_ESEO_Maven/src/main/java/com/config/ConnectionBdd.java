@@ -17,13 +17,12 @@ public class ConnectionBdd {
 		try {
 			DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
 			connect = DriverManager.getConnection(
-					"jdbc:mysql://"+ip+":3306/"+bdd+"?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC",user,password);
+					"jdbc:mysql://"+ip+":3306/"+bdd+"?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC" +
+					        "user=" + user + "&password=" + password);
 			
 			
-		} catch (SQLException e) {
-			 e.printStackTrace();
-	         System.err.println(e.getClass().getName()+": "+e.getMessage());
-	         System.exit(0);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
 	
 	

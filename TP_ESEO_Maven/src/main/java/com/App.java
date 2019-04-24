@@ -19,7 +19,7 @@ public class App
 			SpringApplication.run(App.class,args);
 			System.out.println("Application démarrée");
 		}catch (Exception e) {
-			System.out.println();
+			throw new RuntimeException(e);
 		}
     }
 }
