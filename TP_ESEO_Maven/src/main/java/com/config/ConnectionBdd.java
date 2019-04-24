@@ -17,7 +17,7 @@ public class ConnectionBdd {
 		try {
 			DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
 			connect = DriverManager.getConnection(
-					"jdbc:mysql://"+ip+":3306/"+bdd+"?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC" +
+					"jdbc:mysql://"+ip+":3306/"+bdd+"?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC"+
 					        "user=" + user + "&password=" + password);
 			
 			
