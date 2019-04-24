@@ -46,7 +46,6 @@ public boolean creationVille(Ville ville) {
 			
 			
 		}catch (Exception e){
-			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
 		
@@ -93,7 +92,6 @@ public boolean creationVille(Ville ville) {
 			
 			
 		}catch (Exception e) {
-			e.printStackTrace();
 			throw new RuntimeException(e);
 	
 	  }
@@ -111,7 +109,6 @@ public boolean creationVille(Ville ville) {
 
 			prepare.close();
 		}catch (Exception e) {
-			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
 	}
@@ -143,7 +140,6 @@ public boolean creationVille(Ville ville) {
 			init = true;
 
 		} catch (Exception e) {
-			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
 		return init;
@@ -191,7 +187,6 @@ public boolean creationVille(Ville ville) {
 			
 			
 		}catch (Exception e) {
-			e.printStackTrace();
 			throw new RuntimeException(e);
 	
 	
